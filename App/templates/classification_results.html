@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Results</title>
+    <link rel="stylesheet" type="text/css" href="static/css/classification_results.css">
+    <link rel="icon" href="../static/img/Apple_emogi.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Fruit Identification</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/endpoints_list">API Endpoints</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/storytelling">Storytelling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/classification_results">Classification Results</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center">Model 1 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_1.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_1.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 1 Analysis</h2>
+                    <p>The graph depicts the training and validation accuracy of Model 1 over 10 epochs. The training accuracy shows a steady increase, indicating that the model is learning and fitting the training data progressively better. In contrast, the validation accuracy exhibits a slight initial rise followed by fluctuations, and it remains substantially lower than the training accuracy. This pattern suggests that while the model is becoming more accurate on the training data, it is not generalizing well to the validation data, indicating possible overfitting.</p>
+                    <h3>Confusion Matrix Breakdown</h3>
+                    <ul>
+                        <li><strong>Apple:</strong>
+                            <ul>
+                                <li>Correctly classified: 187</li>
+                                <li>Most common misclassifications: Mango (51), Strawberry (80)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Banana:</strong>
+                            <ul>
+                                <li>Correctly classified: 177</li>
+                                <li>Most common misclassifications: Mango (65), Apple (62)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Grape:</strong>
+                            <ul>
+                                <li>Correctly classified: 271</li>
+                                <li>Most common misclassifications: Apple (62), Banana (38)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mango:</strong>
+                            <ul>
+                                <li>Correctly classified: 245</li>
+                                <li>Most common misclassifications: Banana (62), Apple (56)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Strawberry:</strong>
+                            <ul>
+                                <li>Correctly classified: 306</li>
+                                <li>Most common misclassifications: Apple (48), Banana (17)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>The confusion matrix reveals that while the model performs well in classifying certain categories like Grape and Strawberry, it struggles more with others, notably Apple and Mango, which are frequently misclassified as other fruits. This indicates areas where the model could be improved.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 2 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_2.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_2.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 2 Analysis</h2>
+                    <p>In the training and validation accuracy graph for Model 2, the training accuracy steadily increases, reaching nearly 0.9, while the validation accuracy shows an upward trend initially but plateaus and slightly decreases towards the end, stabilizing around 0.7. This suggests that the model is learning well on the training data but is starting to overfit as the validation accuracy does not increase correspondingly after a certain point.</p>
+                    <p>The confusion matrix for Model 2 shows better performance compared to Model 1. The counts for true positives (diagonal elements) are higher across most categories, especially for "Grape" and "Strawberry," indicating that Model 2 has improved its classification accuracy for these categories. There are fewer misclassifications overall, as seen in the reduced off-diagonal counts compared to Model 1.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 3 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_3.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_3.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 3 Analysis</h2>
+                    <p><strong>Training and Validation Accuracy:</strong></p>
+                    <ul>
+                        <li>Training Accuracy: The training accuracy for Model 3 starts around 0.80 and quickly rises to 1.00, indicating the model learns the training data very well over epochs.</li>
+                        <li>Validation Accuracy: The validation accuracy starts at 0.85 and slightly increases but then plateaus around 0.86. This indicates that while the model learns the training data very well, it does not generalize as effectively to the validation data, suggesting potential overfitting.</li>
+                    </ul>
+                    <p><strong>Summary:</strong></p>
+                    <ul>
+                        <li>Model 1: Shows moderate overfitting and performs reasonably well with a validation accuracy of around 0.65.</li>
+                        <li>Model 2: Shows better generalization than Model 1, achieving a validation accuracy of around 0.73, with fewer misclassifications.</li>
+                        <li>Model 3: Although it has the highest training accuracy, it shows signs of overfitting. It achieves a validation accuracy of around 0.86 and has the most balanced and accurate confusion matrix results across all models.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 4 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_4.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_4.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 4 Analysis</h2>
+                    <p><strong>Training and Validation Accuracy:</strong></p>
+                    <ul>
+                        <li>The training accuracy of Model 4 improves consistently, reaching close to 0.9 by the 9th epoch.</li>
+                        <li>The validation accuracy starts around 0.6 and shows minor fluctuations but generally trends upwards, peaking at around 0.7.</li>
+                        <li>There is a noticeable gap between the training and validation accuracy, indicating potential overfitting.</li>
+                    </ul>
+                    <p>Model 4 shows high training accuracy but noticeable overfitting and confusion in certain categories.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h1 class="text-center mt-5">Model 5 Classification Results</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container">
+                    <img src="../static/img/Accuracy_Epoch_Graph_images_app/model_5.png" alt="Accuracy Epoch Graph">
+                    <p>Training and Validation Accuracy</p>
+                </div>
+                <div class="image-container">
+                    <img src="../static/img/Confusion_matrix_images_app/model_5.png" alt="Confusion Matrix">
+                    <p>Confusion Matrix</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="explanation-container">
+                    <h2>Model 5 Analysis</h2>
+                    <p><strong>Training and Validation Accuracy:</strong></p>
+                    <ul>
+                        <li>Training accuracy reaches close to 1.0.</li>
+                        <li>Validation accuracy starts high, fluctuates slightly, and stabilizes around 0.875.</li>
+                    </ul>
+                    <p><strong>Confusion Matrix:</strong></p>
+                    <ul>
+                        <li>Best overall performance with high accuracy across all categories.</li>
+                        <li>"Apple" (318 correct), "Banana" (315 correct), "Grape" (368 correct), "Mango" (343 correct), and "Strawberry" (361 correct) show strong prediction accuracy.</li>
+                        <li>Minimal misclassifications, indicating a robust model.</li>
+                    </ul>
+                    <p><strong>Overall Comparison:</strong></p>
+                    <ul>
+                        <li>Accuracy: Model 5 shows the best overall accuracy in both training and validation phases. It also has the highest number of correct predictions across all categories.</li>
+                        <li>Stability: Models 3 and 5 show the least fluctuation in validation accuracy, indicating more stable performance.</li>
+                        <li>Misclassifications: Model 3 and Model 5 have the fewest misclassifications, making them the most reliable for predictions.</li>
+                        <li>Recommendation: Based on the comparison, Model 5 is the most robust and accurate for predicting the given categories, followed closely by Model 3.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer bg-light text-left text-lg-start mt-auto">
+        <div class="container p-4">
+            <p>Collaborators:</p>
+            <ul>
+                <li>David Tecuatl</li>
+                <li>Hari Uriel Rivera Ulloa</li>
+                <li>Jose Gilberto Nunez Beltran</li>
+                <li>Priscila Matus Diaz</li>
+                <li>Javier Alarcon</li>
+            </ul>
+            <p>
+                <a href="https://github.com/Starkilled1/fruit-classification-project.git" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+                        width="30">
+                    Source Code on GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
