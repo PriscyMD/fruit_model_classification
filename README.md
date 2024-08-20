@@ -6,6 +6,9 @@ Collaborators:
 - Gilberto Nuñez
 - Hari Rivera
 
+Neural Network Models:
+- https://drive.google.com/drive/folders/17F7ry62CAwbsGrJuCh7tN6SK343FAa4z?usp=sharing 
+
 # Capturing the Future of Supermarket Fruit Sales
 
 In a world where technology advances rapidly, supermarkets constantly seek ways to enhance customer experience and optimize their operations. Our fruit image detection project using a machine learning model aligns perfectly with these trends, offering innovative and effective solutions to current challenges.
